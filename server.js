@@ -59,13 +59,12 @@ initializeDb().then(() => {
 
 // ---------- Jibble API Helper Functions ----------
 function getJibbleHeaders() {
-    // Jibble typically uses API Key in headers, not OAuth2
     return {
-        'Authorization': `Bearer ${JIBBLE_API_KEY}`,
-        'Content-Type': 'application/json',
-        'X-API-Key': JIBBLE_API_KEY // Some versions use this
+        'Authorization': `ApiKey ${JIBBLE_API_KEY}`,
+        'Content-Type': 'application/json'
     };
 }
+
 
 async function jibbleApiCall(method, endpoint, data = null) {
     try {
