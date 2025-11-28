@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // ---------- Configuration ----------
 const PORT = process.env.PORT || 3000;
 const JIBBLE_API_BASE = 'https://api.jibble.io';
-const JIBBLE_API_KEY = process.env.JIBBLE_API_KEY_ID;
+const JIBBLE_API_KEY = process.env.JIBBLE_API_KEY;
 
 if (!JIBBLE_API_KEY) {
     console.error('ERROR: JIBBLE_API_KEY environment variable is required');
